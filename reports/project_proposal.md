@@ -15,6 +15,10 @@ Azimi, Jomali, Mofrad, “Accounting for Diffusion in Agent Based Models of Reac
 Downloaded from http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025306 (Links to an external site.)
 In this paper, the authors investigate a computational agent-based model do determine its accuracy in modeling the diffusion of molecules in a three-dimensional solution. They find that their model closely mimics the real behavior of these systems, and they go on to simulate the effects of molecular crowding on effective diffusion.
 
+Andrew T. Crooks, Atesmachew B. Hailegiorgis, "An agent-based modeling approach applied to the spread of cholera"
+Link: http://www.sciencedirect.com/science/article/pii/S1364815214002515
+
+
 ### Experiments
 
 ### Learning Goals
