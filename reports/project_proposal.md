@@ -19,7 +19,13 @@ Andrew T. Crooks, Atesmachew B. Hailegiorgis, "An agent-based modeling approach 
 Link: http://www.sciencedirect.com/science/article/pii/S1364815214002515
 In this paper, the concept of directly agent based modeling to a specific deisease is explored. The authors' approach will be useful to us when creating a model of a specific disease ourselves. It is especially intereting how they modeled the spread of cholera, which needs a less obvious approach than most diseases.
 
+Kathleen Carley, et al., "BioWar: Acalable Agent-based Model of Bioattacks"
+Link: http://www.casos.cs.cmu.edu/publications/protected/2005-2006/carley_2006_biowarbioattacks.pdf
+Looking at the effects that external dynamics such as economics and social networks have on the spread of various diseases
 
+Weidong Gu and Robert Novak, "Agent-based modelling of mosquito foraging behaviour for malaria control"
+Link: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2818421/
+Interesting commentary on ways to factor in the causes of diseases as agents themselves rather than attributes of the agents that could be infected
 ### Experiments
 
 ### Learning Goals
