@@ -17,6 +17,7 @@ In this paper, the authors investigate a computational agent-based model do dete
 
 Andrew T. Crooks, Atesmachew B. Hailegiorgis, "An agent-based modeling approach applied to the spread of cholera"
 Link: http://www.sciencedirect.com/science/article/pii/S1364815214002515
+In this paper, the concept of directly agent based modeling to a specific deisease is explored. The authors' approach will be useful to us when creating a model of a specific disease ourselves. It is especially intereting how they modeled the spread of cholera, which needs a less obvious approach than most diseases.
 
 
 ### Experiments
