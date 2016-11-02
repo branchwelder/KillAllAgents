@@ -66,3 +66,7 @@ Brenna: I originally listed my learning goals to include working with topic rele
 ### Example Results Figures
 
 ![Model Validation](./images/image18.png?raw=true "Model Validation")
+![Model Pipeline](./images/image03.png?raw=true "Model Pipeline")
+![Model Heatmap](./images/image15.png?raw=true "Model Heatmap")
+![Model Daily Distribution](./images/image02.png?raw=true "Model Daily Distribution")
+![Model Results Comparison](./images/image04.png?raw=true "Model Results Comparison")
