@@ -1,10 +1,10 @@
 # Kill All Agents: An Investigation of Infectious Disease and Agent Based Modeling
 Authors: Kathryn Hite, Brenna Manning, Hannah Twigg-Smith, 
 
-## Abstract
+### Abstract
 We intend to model the spread of infectious disease in humans. The first step of this is to implement a simple agent-based model in a 2D CA modeling a simple disease spread by interpersonal contact, e.g. the common cold. From there, we will add more features, modeling a different, more complicated disease. Modeling the disease to evolve as an agent itself will allow for different strains of a disease to interact within the model.  Including clustering to represent “cities” or social networks in our model will demonstrate how disease spread may be impacted by these factors which exist in the real world. 
 
-## Annotated Bibliography
+### Annotated Bibliography
 Liliana Perez, Suzana Dragicevic, "An agent-based approach for modeling dynamics of contagious disease spread" International Journal of Health and Geophysics 2009 – Published 05 August 2009 Link: https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-8-50 (Links to an external site.) 
 This paper uses an agent-based modelling approach to integrate geographic information about individuals to simulate the spread of contagious disease in an urban setting based on people's daily activities, movement, and geo-spatial interactions between people. The authors' goal was to create a model to show how disease spreads through a network of human interactions, and give people a better understanding of how this occurs in an urban environment. It would be particularly useful for running "what if" scenarios on potential outbreaks.
 
@@ -22,11 +22,11 @@ Chung-Yuan Huang, Chuen-Tsai Sun, Ji-Lung Hsieh, Holin Lin. “Simulating SARS: 
 Link: http://jasss.soc.surrey.ac.uk/7/4/2.html
 
 
-## Experiments
+### Experiments
 Our project will consist of first creating a simple model of a disease spread by interpersonal contact, such as the common cold. The model will be an agent-based two-dimensional cellular automaton with few rules. Agents (representing the humans in this model) will have an attribute that reflects whether they are healthy and not contagious, healthy and contagious, unhealthy and not contagious, and unhealthy and contagious. Additionally, they will have an attribute reflecting their susceptibility to the disease (where a susceptibility of zero indicates immunity) as well as an attribute describing how often they move.
 Once we have created this simple model, we will be able to extend it with experiments based on those found in some relevant papers. These experiments range from fairly simple to very complicated, and a full list of them can be found in the extensions section.
 
-## Extensions
+### Extensions
 After the completion of our initial simple model, there are several possible directions to go deeper. We plan on adding clustering to our model to represent cities. This will allow for us to investigate how the disease might move between groups of people and take social interactions/networks into account. We also plan to incorporate evolution of both the disease and the human agents over time, simulating the disease getting stronger and/or humans becoming immune. Other potential ways we might be able to expand our model once we complete these steps are included in the list below.
 
 
@@ -46,7 +46,7 @@ After the completion of our initial simple model, there are several possible dir
 - How do different human activities affect the agents involved? (e.g. going to work or school, sports, airports)
 - If the disease is genetic, how might we represent that? What would the population look like in thousands of (model) years?
 
-## What Might Possible Results Look Like?/How Do We Plan to Interpret Results?
+### What Might Possible Results Look Like?/How Do We Plan to Interpret Results?
 One possible result representation would be a comparison of the disease spread rate in our simple model with empirical data to validate that we have an accurate foundation to build our extensions on.
 
 
