@@ -16,10 +16,10 @@ Kathleen Carley, et al., "BioWar: Acalable Agent-based Model of Bioattacks" Link
 
 Weidong Gu and Robert Novak, "Agent-based modelling of mosquito foraging behaviour for malaria control" Link: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2818421/ Interesting commentary on ways to factor in the causes of diseases as agents themselves rather than attributes of the agents that could be infected
 
-Azadeh Alimadad, Vahid Dabbaghian, Suraj K. Singhk, and Herbert H. Tsang, “Modeling HIV Spread through Sexual Contact using a Cellular Automaton” Link: http://www.cecm.sfu.ca/~mmonagan/MITACS/papers/VahidHIV.pdf
+Azadeh Alimadad, Vahid Dabbaghian, Suraj K. Singhk, and Herbert H. Tsang, “Modeling HIV Spread through Sexual Contact using a Cellular Automaton” Link: http://www.cecm.sfu.ca/~mmonagan/MITACS/papers/VahidHIV.pdf  Models the transmisson of HIV through a population in the context of social connections. 
 
 Chung-Yuan Huang, Chuen-Tsai Sun, Ji-Lung Hsieh, Holin Lin. “Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments.”  Journal of Artificial Societies and Social Simulation vol. 7, no. 4. 31 October, 2004.
-Link: http://jasss.soc.surrey.ac.uk/7/4/2.html
+Link: http://jasss.soc.surrey.ac.uk/7/4/2.html  This paper proposes a model of epidemiological scenarios in daily contact social networks using a small-world model. It demonstrates use of 2D automata to model disease spread between social contacts.
 
 
 ### Experiments
