@@ -2,7 +2,7 @@
 Authors: Kathryn Hite, Brenna Manning, Hannah Twigg-Smith
 
 ### Abstract
-We intend to model the spread of infectious disease in humans. The first step of this is to implement a simple agent-based model in a 2D CA modeling a simple disease spread by interpersonal contact, e.g. the common cold. From there, we will add more features, modeling a different, more complicated disease. Modeling the disease to evolve as an agent itself will allow for different strains of a disease to interact within the model.  Including clustering to represent “cities” or social networks in our model will demonstrate how disease spread may be impacted by these factors which exist in the real world. 
+We intend to model the spread of infectious disease in humans. The first step of this is to implement a simple agent-based model in a 2D CA modeling a disease spread by interpersonal contact, e.g. the common cold. From there, we will add more features, modeling a different, more complicated disease. Modeling the disease to evolve as an agent itself will allow for different strains of a disease to interact within the model.  Including clustering to represent “cities” or social networks in our model will demonstrate how disease spread may be impacted by these factors which exist in the real world. 
 
 ### Annotated Bibliography
 Liliana Perez, Suzana Dragicevic, "An agent-based approach for modeling dynamics of contagious disease spread" International Journal of Health and Geophysics 2009 – Published 05 August 2009 Link: https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-8-50 (Links to an external site.) 
