@@ -63,3 +63,6 @@ Katie: Identifying correct models and characteristics to do specific analysis an
 
 Brenna: I originally listed my learning goals to include working with topic relevant to world and learning about agent-based modeling. This project would strongly  fulfill both of those goals. I am interested in exploring how agents interact in a system in a more in depth way, and seeing how these types of models behave in a more complex simulation.  By applying this tool/method to the concept of infectious disease, I will have the opportunity to connect my work to something in the real world, and draw parallels between our simulations and reality.  This project has so much room to grow and expand, and I am very excited about some of the potential extensions to this project, and the opportunities they provide to reach a greater understanding of how these types of models can be made and how they can be both useful and interesting.
 
+### Example Results Figures
+
+![Model Validation](./reports/images/image18.png?raw=true "Model Validation")
