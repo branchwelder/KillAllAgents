@@ -1,5 +1,5 @@
 # Kill All Agents: An Investigation of Infectious Disease and Agent Based Modeling
-Authors: Kathryn Hite, Brenna Manning, Hannah Twigg-Smith, 
+Authors: Kathryn Hite, Brenna Manning, Hannah Twigg-Smith
 
 ### Abstract
 We intend to model the spread of infectious disease in humans. The first step of this is to implement a simple agent-based model in a 2D CA modeling a simple disease spread by interpersonal contact, e.g. the common cold. From there, we will add more features, modeling a different, more complicated disease. Modeling the disease to evolve as an agent itself will allow for different strains of a disease to interact within the model.  Including clustering to represent “cities” or social networks in our model will demonstrate how disease spread may be impacted by these factors which exist in the real world. 
