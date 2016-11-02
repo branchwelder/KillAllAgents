@@ -57,8 +57,9 @@ Our final goal is to create an interactive model that allows users to change hea
 
 ### Learning Goals
 
-Hannah: Learning more about numpy and modeling something interesting.
+Hannah: I would like to learn more about numpy by creating a model where I need to largely come up with my own way of modeling things, as opposed to the homework assignments where I could largely copy/modify code written above. I’m also looking forward to working with visualization libraries to create descriptive (and possible interactive) graphs of our results. I also enjoy the freedom that this project gives us in terms of different directions we could take once we have completed our simple model, because I want to learn more about the intricacies of disease spread, and these very specific extensions give me the opportunity to do that.
 
-Katie: Identifying correct models and characteristics to do specific analysis and using numpy.
+Katie: Identifying correct models and characteristics to do specific analysis and using numpy.  Because of the broad scope, this project has opportunities for using a variety of different model types in different ways, which will require choosing and implementing the appropriate model for each extension that we want to explore.  We will also use tools such as numpy and matplotlib for modeling and results representation.
 
-Brenna: Working with topic relevant to world and learning about agent-based modeling.
+Brenna: I originally listed my learning goals to include working with topic relevant to world and learning about agent-based modeling. This project would strongly  fulfill both of those goals. I am interested in exploring how agents interact in a system in a more in depth way, and seeing how these types of models behave in a more complex simulation.  By applying this tool/method to the concept of infectious disease, I will have the opportunity to connect my work to something in the real world, and draw parallels between our simulations and reality.  This project has so much room to grow and expand, and I am very excited about some of the potential extensions to this project, and the opportunities they provide to reach a greater understanding of how these types of models can be made and how they can be both useful and interesting.
+
