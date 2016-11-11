@@ -47,7 +47,8 @@ class World(Cell2D):
 	def step(self):
 
 		# Loop through agent objects and update based on params
-		self.new_agent_array = [[None for x in range(self.dim)] for y in range(self.dim)]
+		self.new_agent_array = self.agent_array
+		
 		for i in range(self.dim-1):
 			for j in range(self.dim-1):
 				if self.agent_array[i][j] != None:
