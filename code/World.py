@@ -9,18 +9,18 @@ from Cell2D import Cell2D
 
 class World(Cell2D):
 
-	def __init__(self, params, agent_array=None):
+	def __init__(self, agent_array=None, **params):
 
 		# Set up world params
 		self.dim = params.get("n", 0)
-		self.num_population = params.get("num_agents", self.dim^2)
+		self.num_population = params.get("num_agents", self.dim**2)
 		self.num_sick = params.get("num_sick", 0)
 
 		# Set up the agent population
 		if agent_array == None:
 			# populate agent_array
 			self.agent_array = [[None for x in range(self.dim)] for y in range(self.dim)]
-			health_shuffle = numpy.zeros(self.dim^2 - self.num_sick) + [1 for _ in range(self.num_sick)]
+			health_shuffle = np.zeros(self.dim**2 - self.num_sick) + [1 for _ in range(self.num_sick)]
 			random.shuffle(health_shuffle)
 
 			for i in range(self.dim):
