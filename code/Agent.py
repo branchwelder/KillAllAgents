@@ -1,13 +1,13 @@
 import numpy as np
 class Agent:
-    def __init__(self, params):
+    def __init__(self, **params):
         """Creates a new agent at the given location.
         
         params: dictionary of parameters
 
         """
         # extract the parameters
-        self.health_status = params.get('health_status', 0)
+        self.health = params.get('health', 0)
         # Healthy = 0, Sick = 0 Contagious = 0-1.
         
 
