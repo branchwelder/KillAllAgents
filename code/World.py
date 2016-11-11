@@ -47,13 +47,14 @@ class World(Cell2D):
 	def step(self):
 
 		# Loop through agent objects and update based on params
+		self.new_agent_array = [[None for x in range(self.dim)] for y in range(self.dim)]
 		for i in range(self.dim-1):
 			for j in range(self.dim-1):
 				if self.agent_array[i][j] != None:
 					# Get list of neighbors health
 					neighbors_health = []
-					for a in range(i - 1, i + 2):
-						for b in range(j - 1, j + 2):
+					for a in range(i - 1, i + 1):
+						for b in range(j - 1, j + 1):
 							if (a, b) != (i, j):
 								neighbors_health.append(self.agent_array[a][b].health)
 
@@ -65,17 +66,18 @@ class World(Cell2D):
 					# If sick (and contagious)
 					if self.agent_array[i][j].health == 1:
 						if random.randrange(0, 100) == 1:
-							self.agent_array[i][j].health = 0
+							self.new_agent_array[i][j].health = 0
 
 					# If health and contagious
 					elif self.agent_array[i][j].health < 1 and self.agent_array[i][j].health > 0:
-						self.agent_array[i][j].health += 0.1	
+						self.new_agent_array[i][j].health += 0.1	
 
 					# If healthy
 					else:
 						if random.randrange(math.floor(neigh_health_frac*100), 102) > self.agent_array[i][j].immunity*100:
-							self.agent_array[i][j].health = 0.1
+							self.new_agent_array[i][j].health = 0.1
 
+		self.agent_array = new_agent_array()
 		self.update_vis()
 
 
