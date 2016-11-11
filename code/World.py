@@ -45,19 +45,19 @@ class World(Cell2D):
 		for i in range(self.dim):
 			for j in range(self.dim):
 				self.array[i][j] = self.agent_array[i][j].health + 1
-		print(self.array)
+		#print(self.array)
 
 
 	# Every step represents the change in one hour
 	def step(self):
 
 		# Loop through agent objects and update based on params
-		new_agent_array = deepcopy(self.agent_array)
+		new_agent_array = copy.deepcopy(self.agent_array)
 		
 		for i in range(self.dim):
 			for j in range(self.dim):
 				if self.agent_array[i][j] != None:
-					print("Cell: " + str((i, j)))
+					#print("Cell: " + str((i, j)))
 					# Get list of neighbors health
 					neighbors_health = []
 					for a in range(i - 1, i + 2):
@@ -73,38 +73,38 @@ class World(Cell2D):
 					# Update agent health
 					# If sick (and contagious)
 					if self.agent_array[i][j].health > 0.9:
-						print("I was sick")
+						#print("I was sick")
 						if random.randrange(0, 100) == 1:
 							new_agent_array[i][j].health = 0
 
 					# If health and contagious
 					elif self.agent_array[i][j].health < 1 and self.agent_array[i][j].health > 0:
-						print("I was contagious")
+						#print("I was contagious")
 						new_agent_array[i][j].health += 0.1	
 
 					# If healthy
 					elif self.agent_array[i][j].health == 0:
-						print("I was healthy")
+						#print("I was healthy")
 						immunity = self.agent_array[i][j].immunity*100
 						neigh_health_chance = math.floor(neigh_health_frac*100)
 						health_chance = random.randrange(neigh_health_chance, 102)
-						print("Immunity: " + str(immunity))
-						print("Neighbor Health Input: " + str(neigh_health_chance))
-						print("Health Chance: " + str(health_chance))
+						##print("Immunity: " + str(immunity))
+						#print("Neighbor Health Input: " + str(neigh_health_chance))
+						#print("Health Chance: " + str(health_chance))
 
 						if neigh_health_chance == 0:
-							print("I stayed healthy")
+							#print("I stayed healthy")
 							new_agent_array[i][j].health = 0
 						elif health_chance > immunity:
-							print("I became contagious")
+							#print("I became contagious")
 							new_agent_array[i][j].health = 0.1
 
-		self.agent_array = deepcopy(new_agent_array)
+		self.agent_array = copy.deepcopy(new_agent_array)
 		self.update_vis()
 
 
 	def update_vis(self):
 		for i in range(self.dim):
 			for j in range(self.dim):
-				self.array[i][j] = deepcopy(self.agent_array[i][j].health) + 1
-		print(self.array)
+				self.array[i][j] = copy.deepcopy(self.agent_array[i][j].health) + 1
+		#print(self.array)
