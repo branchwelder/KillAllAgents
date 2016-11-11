@@ -14,7 +14,7 @@ class World(Cell2D):
 		# Set up world params
 		self.dim = params.get("n", 0)
 		self.num_population = params.get("num_agents", self.dim^2)
-		self.num_sick = params.get("num_sick")
+		self.num_sick = params.get("num_sick", 0)
 
 		# Set up the agent population
 		if agent_array == None:
