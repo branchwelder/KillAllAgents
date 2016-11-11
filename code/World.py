@@ -2,6 +2,7 @@
 World for sick and healthy agents
 """
 
+import Agent 
 import numpy as np
 import random
 from Cell2D import Cell2D
@@ -17,28 +18,34 @@ class World(Cell2D):
 
 		# Set up the agent population
 		if agent_array == None:
-			# populate agent_array somehow
-			self.agent_array = None
+			# populate agent_array
+			self.agent_array = [[None for x in range(self.dim)] for y in range(self.dim)]
+			health_shuffle = numpy.zeros(self.dim^2 - self.num_sick) + [1 for _ in range(self.num_sick)]
+			random.shuffle(health_shuffle)
+
+			for i in range(self.dim):
+				for j in range(self.dim):
+					self.agent_array[i][j] = Agent(health=health_shuffle[self.dim * i + j])
 		else:
 			self.agent_array = agent_array
 
 		# Set up occupancy grid to keep track of agent presence
-		self.occupancy_grid = np.zeros(n, n)
-		for x in range(0, n-1):
-			for y in range(0, n-1): 
+		self.occupancy_grid = np.zeros(self.dim, self.dim)
+		for x in range(self.dim-1):
+			for y in range(self.dim-1): 
 				if self.agent_array[i][j] != None:
 					self.occupancy_grid[i][j] = 1
 
 		# Create an agent health visualization array
-		self.array = np.zeros(n, n)
+		self.array = np.zeros(self.dim, self.dim)
 
 
 	# Every step represents the change in one hour
 	def step(self):
 
 		# Loop through agent objects and update based on params
-		for i in range(0, n-1):
-			for j in range(0, n-1):
+		for i in range(self.dim-1):
+			for j in range(self.dim-1):
 				if agent_array[i][j] != None:
 					# Get list of neighbors health
 					neighbors_health = []
@@ -70,6 +77,6 @@ class World(Cell2D):
 
 
 	def update_vis(self, agents):
-		for i in range(0, n-1):
-			for j in range(0, n-1):
+		for i in range(self.dim-1):
+			for j in range(self.dim-1):
 				self.array[i][j] = self.agent[i][j].health + 1
