@@ -12,5 +12,5 @@ class Agent:
         
 
         # How resistent to disease is this agent?
-        self.immunity = params.get('immunity', 0.5)
+        self.immunity = params.get('immunity', 0.9)
   

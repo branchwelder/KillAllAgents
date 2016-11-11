@@ -6,6 +6,7 @@ from Agent import Agent
 import numpy as np
 import random
 from Cell2D import Cell2D
+import math
 
 class World(Cell2D):
 
@@ -72,7 +73,7 @@ class World(Cell2D):
 
 					# If healthy
 					else:
-						if random.randrange(int(neigh_health_frac*100), 100) > self.agent_array[i][j].immunity*100:
+						if random.randrange(math.floor(neigh_health_frac*100), 102) > self.agent_array[i][j].immunity*100:
 							self.agent_array[i][j].health = 0.1
 
 		self.update_vis()
