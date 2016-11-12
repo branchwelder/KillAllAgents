@@ -14,9 +14,9 @@ class World(Cell2D):
 	def __init__(self, agent_array=None, **params):
 
 		# Set up world params
-		self.dim = params.get("n", 0)
+		self.dim = params.get("n", 30)
 		self.num_population = params.get("num_agents", self.dim**2)
-		self.num_sick = params.get("num_sick", 0)
+		self.num_sick = params.get("num_sick", 1)
 
 		# Set up the agent population
 		if agent_array == None:
@@ -36,7 +36,7 @@ class World(Cell2D):
 		# Set up occupancy grid to keep track of agent presence
 		self.occupancy_grid = np.zeros((self.dim, self.dim))
 		for x in range(self.dim):
-			for y in range(self.dim): 
+			for y in range(self.dim):
 				if self.agent_array[i][j] != None:
 					self.occupancy_grid[i][j] = 1
 
@@ -52,8 +52,8 @@ class World(Cell2D):
 	def step(self):
 
 		# Loop through agent objects and update based on params
-		new_agent_array = copy.deepcopy(self.agent_array)
-		
+		new_agent_array = deepcopy(self.agent_array)
+
 		for i in range(self.dim):
 			for j in range(self.dim):
 				if self.agent_array[i][j] != None:
@@ -80,7 +80,7 @@ class World(Cell2D):
 					# If health and contagious
 					elif self.agent_array[i][j].health < 1 and self.agent_array[i][j].health > 0:
 						#print("I was contagious")
-						new_agent_array[i][j].health += 0.1	
+						new_agent_array[i][j].health += 0.1
 
 					# If healthy
 					elif self.agent_array[i][j].health == 0:
@@ -99,12 +99,12 @@ class World(Cell2D):
 							#print("I became contagious")
 							new_agent_array[i][j].health = 0.1
 
-		self.agent_array = copy.deepcopy(new_agent_array)
+		self.agent_array = deepcopy(new_agent_array)
 		self.update_vis()
 
 
 	def update_vis(self):
 		for i in range(self.dim):
 			for j in range(self.dim):
-				self.array[i][j] = copy.deepcopy(self.agent_array[i][j].health) + 1
+				self.array[i][j] = deepcopy(self.agent_array[i][j].health) + 1
 		#print(self.array)
