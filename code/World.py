@@ -82,6 +82,7 @@ class World(Cell2D):
 					if self.agent_array[i][j].health > 0.9:
 						#print("I was sick")
 						if random.randrange(0, 100) == 1:
+							new_agent_array[i][j].recovered = True
 							new_agent_array[i][j].health = 0
 
 					# If health and contagious
@@ -95,7 +96,9 @@ class World(Cell2D):
 						neigh_health_chance = math.floor(neigh_health_frac*100)
 						health_chance = random.randrange(neigh_health_chance, 102)
 
-						if neigh_health_chance == 0:
+						if self.agent_array[i][j].recovered == True:
+							new_agent_array[i][j].health = 0
+						elif neigh_health_chance == 0:
 							new_agent_array[i][j].health = 0
 						elif health_chance > immunity:
 							new_agent_array[i][j].health = 0.1

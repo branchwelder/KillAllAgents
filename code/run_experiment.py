@@ -54,4 +54,4 @@ def run_experiment(path, n, frames, fps):
 
 
 if __name__ == "__main__":
-    run_experiment("output/", n=100, frames=200, fps=5)
+    run_experiment("output/", n=20, frames=200, fps=5)
