@@ -74,8 +74,11 @@ class World(Cell2D):
 									neighbors_health.append(self.agent_array[a][b].health)
 
 					# Get fraction of neighbors that are sick
-					np.ceil(neighbors_health)
 					neigh_health_frac = sum(neighbors_health) / 8
+					#print("Neighbor health:")
+					#print(neighbors_health)
+					#print(neigh_health_frac)
+					#print()
 
 					# Update agent health
 					# If sick (and contagious)
@@ -92,9 +95,14 @@ class World(Cell2D):
 
 					# If healthy
 					elif self.agent_array[i][j].health == 0:
-						immunity = self.agent_array[i][j].immunity*100
-						neigh_health_chance = math.floor(neigh_health_frac*100)
-						health_chance = random.randrange(neigh_health_chance, 102)
+						immunity = self.agent_array[i][j].immunity
+						neigh_health_chance = neigh_health_frac
+						health_chance = random.random() * neigh_health_chance * 5
+						#print("Agent Health:")
+						#print(immunity)
+						#print(neigh_health_chance)
+						#print(health_chance)
+						#print()
 
 						if self.agent_array[i][j].recovered == True:
 							new_agent_array[i][j].health = 0
@@ -117,3 +125,5 @@ class World(Cell2D):
 		self.healthy.append(np.count_nonzero(self.array == 1))
 		self.contagious.append(np.count_nonzero((self.array > 1) & (self.array < 2)))
 		self.sick.append(np.count_nonzero(self.array == 2))
+
+		print(self.array)
