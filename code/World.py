@@ -5,6 +5,31 @@ from Cell2D import Cell2D
 import math
 from copy import deepcopy
 
+def distance(x, y):
+    """Helper function for initializing each cell in the array with
+    a distance from the city center.
+    """
+    x_dist = abs(x-city_center)
+    y_dist = abs(y-city_center)
+    return np.sqrt(x_dist**2 + y_dist**2)
+
+
+def city_init(n=100):
+    """Returns two arrays:
+        arr: represents the city, with the city center holding the highest value
+        agents: represents the placement of the agents, randomly assigned based
+        on their extroversion attributes
+    """
+    global city_center
+    city_center = n//2
+    dist_arr = np.fromfunction(distance,(n,n))
+
+    #normalize so city center is in the middle of the array
+    dist_arr = np.amax(dist_arr) - dist_arr
+    dist_arr = dist_arr/np.amax(dist_arr)
+
+    return dist_arr
+
 class World(Cell2D):
 	"""
 	Represents a world of sick and healthy agents.
@@ -14,13 +39,17 @@ class World(Cell2D):
 
 		# Set up world params
 		self.n = params.get("n", 10)
-		self.num_population = params.get("num_agents", self.n**2)
-		self.num_sick = params.get("num_sick", 1)
+		self.num_population = params.get("num_agents", self.n**2-50)
+		self.num_sick = params.get("num_sick", 5)
 
 		# Initialize arrays to track array data
 		self.healthy = []
 		self.contagious = []
 		self.sick = []
+
+
+		# Create city density array
+		self.city_density = city_init(n=self.n)
 
 		# Set up the agent population
 		if agent_array == None:
@@ -35,7 +64,8 @@ class World(Cell2D):
 
 			for i in range(self.n):
 				for j in range(self.n):
-					self.agent_array[i][j] = Agent(health=health_shuffle[self.n * i + j])
+					if random.random() <= self.city_density[i][j]:
+						self.agent_array[i][j] = Agent(health=health_shuffle[self.n * i + j])
 		else:
 			self.agent_array = agent_array
 
@@ -50,7 +80,10 @@ class World(Cell2D):
 		self.array = np.zeros((self.n, self.n))
 		for i in range(self.n):
 			for j in range(self.n):
-				self.array[i][j] = self.agent_array[i][j].health + 1
+				if self.occupancy_grid[i][j] == 1:
+					self.array[i][j] = self.agent_array[i][j].health + 1
+				else:
+					self.array[i][j] = 0
 		#print(self.array)
 
 
@@ -125,5 +158,3 @@ class World(Cell2D):
 		self.healthy.append(np.count_nonzero(self.array == 1))
 		self.contagious.append(np.count_nonzero((self.array > 1) & (self.array < 2)))
 		self.sick.append(np.count_nonzero(self.array == 2))
-
-		print(self.array)

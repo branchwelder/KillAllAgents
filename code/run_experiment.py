@@ -78,4 +78,4 @@ def run_experiment(path, n, frames, fps):
 
 
 if __name__ == "__main__":
-    run_experiment("output/", n=20, frames=100, fps=7)
+    run_experiment("output/", n=5, frames=100, fps=7)
