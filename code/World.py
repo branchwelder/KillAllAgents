@@ -84,6 +84,8 @@ class World(Cell2D):
 					self.array[i][j] = self.agent_array[i][j].health + 1
 				else:
 					self.array[i][j] = 0
+
+		self.num_population = sum(self.occupancy_grid)
 		#print(self.array)
 
 
