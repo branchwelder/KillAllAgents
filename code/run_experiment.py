@@ -67,7 +67,7 @@ def run_experiment(path, n, frames, fps):
     to the output folder.
     """
     # make animation and save it
-    make_animation(path, n, frams, fps)
+    make_animation(path, n, frames, fps)
 
     # Make graphs
     graph_bins(path, n, frames)
@@ -78,4 +78,4 @@ def run_experiment(path, n, frames, fps):
 
 
 if __name__ == "__main__":
-    run_experiment("output/", n=5, frames=20, fps=5)
+    run_experiment("output/", n=20, frames=100, fps=7)
