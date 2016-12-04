@@ -9,9 +9,14 @@ class Agent:
         self.recovered = False
 
         # extract the parameters
-        self.health = params.get('health', 0)
-        # Healthy = 0, Sick = 0 Contagious = 0-1.
 
+        # How sick is this agent?
+        # Healthy = 0, Sick = 0 Contagious = 0-1.
+        self.health = params.get('health', 0)
 
         # How resistent to disease is this agent?
         self.immunity = params.get('immunity', 0.9)
+
+        # How extroverted is this agent?
+        # Introverted = 0, Extroverted = 1, Range between
+        self.social = 1#np.random.random()

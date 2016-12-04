@@ -1,4 +1,6 @@
+
 from __future__ import print_function, division
+
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -47,7 +49,7 @@ def city_init(n=100):
 
     return dist_arr
 
-class MovingWorld(Cell2D):
+class SocialMovingWorld(Cell2D):
     """
     Represents a world of sick and healthy agents.
     """
@@ -108,7 +110,8 @@ class MovingWorld(Cell2D):
         # Loop through agent objects and update based on params
         new_agent_array = deepcopy(self.agent_array)
         
-        # Update agent health
+        
+        # Determine agent health
         for i in range(self.n):
             for j in range(self.n):
                 if self.agent_array[i][j] is not None:
@@ -149,7 +152,7 @@ class MovingWorld(Cell2D):
                         elif health_chance > immunity:
                             new_agent_array[i][j].health = 0.1
                             
-        # Move agents       
+        # Move agents based on their social parameter        
         empty = self.array == 0
         occupied = self.array > 0
         empty_locs = np.transpose(np.nonzero(empty))
@@ -165,11 +168,32 @@ class MovingWorld(Cell2D):
 
 
             for i in range(self.num_moves):
+                # Choose a random agent to move
                 source = occupied_locs[i]
                 source_i, source_j = tuple(source)
-                dest_i, dest_j = tuple(empty_locs[i])
+
+                # Choose a move location based on the social param of the agent
+                # Check the empty locations against the occupancy grid to determine num neughbors
+                social_neighbors = []
+                for i in range(len(empty_locs)):
+                    n = 0
+                    x, y = tuple(empty_locs[i])
+                    for a in range(x - 1, y + 2):
+                        for b in range(x - 1, y + 2):
+                            if (a, b) != (x, y) and a >= 0 and a < self.n and b >= 0 and b < self.n:
+                                n += self.occupancy_grid[x][y]
+                    social_neighbors.append(n/8)
+
+                # social_neighbors at each index provides the number of neighbors of the corresponding index of empty_locs
+                # Get closest value in social_neighbors to self.social
+                agent_social = self.agent_array[source_i][source_j].social
+                closest_social = min(social_neighbors ,key=lambda x:abs(x-agent_social))
+
+                # Get the destination index as the empty_loc with the closest social value to the agent
+                dest_i, dest_j = tuple(empty_locs[social_neighbors.index(closest_social)])
+                empty_locs[social_neighbors.index(closest_social)] = (source_i, source_j)
                 
-                # Check if agent is healthy(or contagious but not sick) and if sick agents moving is true
+                # Check if agent is healthy(or contagious but not sick) or if sick agents moving is true
                 if self.array[source_i][source_j] < 2 or self.sick_move:
                     # move
                     new_agent_array[dest_i][dest_j] = new_agent_array[source_i][source_j]
@@ -177,6 +201,8 @@ class MovingWorld(Cell2D):
                     new_agent_array[source_i][source_j] = None
                     self.array[source_i][source_j] = 0
                     empty_locs[i] = source
+
+
 
 
         self.agent_array = deepcopy(new_agent_array)
