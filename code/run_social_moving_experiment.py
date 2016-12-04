@@ -93,7 +93,7 @@ if __name__ == "__main__":
     moves_per_step = 3
     frames = 400
     fps = 7
-    num_agents = n**2-100
+    num_agents = n**2-300
 
     run_experiment("output/",
                    n=n,
