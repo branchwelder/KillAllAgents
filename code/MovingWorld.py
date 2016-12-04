@@ -1,8 +1,6 @@
 
 from __future__ import print_function, division
 
-%matplotlib inline
-%precision 3
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -84,7 +82,7 @@ class MovingWorld(Cell2D):
 
             for i in range(self.n):
                 for j in range(self.n):
-                    if isinstance(health_shuffle[self.n * i + j], (int, long, float)):
+                    if isinstance(health_shuffle[self.n * i + j], (int, float)):
                         self.agent_array[i][j] = Agent(health=health_shuffle[self.n * i + j])
         else:
             self.agent_array = agent_array
