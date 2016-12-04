@@ -49,7 +49,7 @@ def city_init(n=100):
 
     return dist_arr
 
-class MovingWorld(Cell2D):
+class SocialMovingWorld(Cell2D):
     """
     Represents a world of sick and healthy agents.
     """
@@ -182,12 +182,12 @@ class MovingWorld(Cell2D):
                         for b in range(x - 1, y + 2):
                             if (a, b) != (x, y) and a >= 0 and a < self.n and b >= 0 and b < self.n:
                                 n += self.occupancy_grid[x][y]
-                    social_neighbors[i] = n / 8
+                    social_neighbors.append(n/8)
 
                 # social_neighbors at each index provides the number of neighbors of the corresponding index of empty_locs
                 # Get closest value in social_neighbors to self.social
                 agent_social = self.agent_array[source_i][source_j].social
-                closest_social = min(empty_locs, key=lambda x:abs(x-agent_social))
+                closest_social = min(social_neighbors ,key=lambda x:abs(x-agent_social))
 
                 # Get the destination index as the empty_loc with the closest social value to the agent
                 dest_i, dest_j = tuple(empty_locs[social_neighbors.index(closest_social)])
