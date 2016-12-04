@@ -10,7 +10,11 @@ def sweep_immunity(path, n, frames, num_agents, num_sick, moves_per_step):
     who are sick or contagious versus time for each immunity value.
     """
     for immunity in [0.3, 0.6, 0.9]:
-        grid = MovingWorld(n=n, immunity=immunity, num_agents=num_agents, num_sick=num_sick, moves_per_step=moves_per_step)
+        grid = MovingWorld(n=n,
+                           immunity=immunity,
+                           num_agents=num_agents,
+                           num_sick=num_sick,
+                           moves_per_step=moves_per_step)
 
         # the World step method must return a value for this to work. In this
         # case, it returns the number that is either sick or contagious.
@@ -31,7 +35,10 @@ def graph_bins(path, n, frames, num_agents, num_sick, moves_per_step):
     contagious) over time.
     """
 
-    world = MovingWorld(n=n, num_agents=num_agents, num_sick=num_sick, moves_per_step=moves_per_step)
+    world = MovingWorld(n=n,
+                        num_agents=num_agents,
+                        num_sick=num_sick,
+                        moves_per_step=moves_per_step)
 
     for i in range(frames):
         world.step()
@@ -52,7 +59,10 @@ def make_animation(path, n, frames, fps, num_agents, num_sick, moves_per_step):
     """Makes an animation of World changing over "frames" steps.
     """
 
-    world = MovingWorld(n=n, num_agents=num_agents, num_sick=num_sick, moves_per_step=moves_per_step)
+    world = MovingWorld(n=n,
+                        num_agents=num_agents,
+                        num_sick=num_sick,
+                        moves_per_step=moves_per_step)
     viewer = WorldViewer(world)
 
     # Create and save animation
@@ -67,10 +77,10 @@ def run_experiment(path, n, frames, fps, num_agents, num_sick, moves_per_step):
     to the output folder.
     """
     # make animation and save it
-    #make_animation(path, n, frames, fps, num_agents, num_sick, moves_per_step)
+    make_animation(path, n, frames, fps, num_agents, num_sick, moves_per_step)
 
     # Make graphs
-    #graph_bins(path, n, frames, num_agents, num_sick, moves_per_step)
+    graph_bins(path, n, frames, num_agents, num_sick, moves_per_step)
     sweep_immunity(path, n, frames, num_agents, num_sick, moves_per_step)
 
     print("Experiment finished!")
@@ -85,4 +95,10 @@ if __name__ == "__main__":
     fps = 7
     num_agents = n**2-100
 
-    run_experiment("output/", n=n, frames=frames, fps=fps, num_agents=num_agents, num_sick=num_sick, moves_per_step=moves_per_step)
+    run_experiment("output/",
+                   n=n,
+                   frames=frames,
+                   fps=fps,
+                   num_agents=num_agents,
+                   num_sick=num_sick,
+                   moves_per_step=moves_per_step)
