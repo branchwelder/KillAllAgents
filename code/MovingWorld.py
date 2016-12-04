@@ -52,6 +52,12 @@ def city_init(n=100):
 class MovingWorld(Cell2D):
     """
     Represents a world of sick and healthy agents.
+        n: dimension of array
+        num_agents: number of agents in array
+        num_sick: number of agents who are sick
+        moves_per_step: number of moves per step in simulation
+        sick_move: boolean of whether or not sick agents move
+
     """
 
     def __init__(self, agent_array=None, **params):
