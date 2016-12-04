@@ -1,4 +1,3 @@
-
 from __future__ import print_function, division
 
 
@@ -61,31 +60,35 @@ class MovingWorld(Cell2D):
     """
 
     def __init__(self, agent_array=None, **params):
+        """Creates agent array and places agents and initializes parameters.
+        """
 
-        # Set up world params
+        # Initialize world parameters
         self.n = params.get("n", 10)
         self.num_population = params.get("num_agents", self.n**2)
         self.num_sick = params.get("num_sick", 1)
         self.num_moves = params.get("moves_per_step", 0)
         self.sick_move = params.get("sick_move", False)
 
-        # Initialize arrays to track array data
+        # Initialize arrays to track illness data
         self.healthy = []
         self.contagious = []
         self.sick = []
 
-        # Set up the agent population
+        # Populate agent array if not passed in existing array
         if agent_array == None:
-            # populate agent_array
-
+            # Create an n by n grid filled with Nones
             self.agent_array = [[None for x in range(self.n)] for y in range(self.n)]
 
+            # Create lists to track illness statuses of agents
             sick_list = [1 for _ in range(self.num_sick)]
             healthy_list = [0 for _ in range(self.num_population - self.num_sick)]
             empty_list = [None for _ in range (self.n**2 - self.num_population)]
-            health_shuffle = sick_list + healthy_list+empty_list
+
+            health_shuffle = sick_list + healthy_list + empty_list
             random.shuffle(health_shuffle)
 
+            # Place agents
             for i in range(self.n):
                 for j in range(self.n):
                     if isinstance(health_shuffle[self.n * i + j], (int, float)):
@@ -93,11 +96,12 @@ class MovingWorld(Cell2D):
         else:
             self.agent_array = agent_array
 
-        # Set up occupancy grid to keep track of agent presence
+        # Initialize occupancy grid to keep track of agent presence
         self.occupancy_grid = np.zeros((self.n, self.n))
         for x in range(self.n):
             for y in range(self.n):
                 if self.agent_array[i][j] is not None:
+                    # Set occupied locations to one
                     self.occupancy_grid[i][j] = 1
 
         # Create an agent health visualization array
@@ -108,15 +112,11 @@ class MovingWorld(Cell2D):
                     self.array[i][j] = self.agent_array[i][j].health + 1
 
 
-
-
     # Every step represents the change in one hour
     def step(self):
 
         # Loop through agent objects and update based on params
         new_agent_array = deepcopy(self.agent_array)
-        
-        
 
         for i in range(self.n):
             for j in range(self.n):
@@ -136,7 +136,6 @@ class MovingWorld(Cell2D):
                     # Update agent health
                     # If sick (and contagious)
                     if self.agent_array[i][j].health > 0.9:
-                        #print("I was sick")
                         if random.randrange(0, 100) == 1:
                             new_agent_array[i][j].recovered = True
                             new_agent_array[i][j].health = 0
@@ -157,18 +156,18 @@ class MovingWorld(Cell2D):
                             new_agent_array[i][j].health = 0
                         elif health_chance > immunity:
                             new_agent_array[i][j].health = 0.1
-                            
-                
+
+
         empty = self.array == 0
         occupied = self.array > 0
         empty_locs = np.transpose(np.nonzero(empty))
         occupied_locs = np.transpose(np.nonzero(occupied))
-        
+
         if len(occupied_locs):
             np.random.shuffle(occupied_locs)
         if len(empty_locs):
-            np.random.shuffle(empty_locs)    
-            
+            np.random.shuffle(empty_locs)
+
             if self.num_moves > len(occupied_locs) or self.num_moves > len(occupied_locs):
                 self.num_moves = min(len(occupied_locs),len(empty_locs))
 
@@ -177,17 +176,17 @@ class MovingWorld(Cell2D):
                 source = occupied_locs[i]
                 source_i, source_j = tuple(source)
                 dest_i, dest_j = tuple(empty_locs[i])
-                
+
                 # Check if agent is healthy(or contagious but not sick) and if sick agents moving is true
                 if self.array[source_i][source_j] < 2 or self.sick_move:
-                    # move
+                    # I like to moveitmoveit
                     new_agent_array[dest_i][dest_j] = new_agent_array[source_i][source_j]
                     self.array[dest_i][dest_j]=self.array[source_i][source_j]
                     new_agent_array[source_i][source_j] = None
+                    # I like to moveitmoveit
                     self.array[source_i][source_j] = 0
+                    # I like to MOVE IT
                     empty_locs[i] = source
-
-
 
 
         self.agent_array = deepcopy(new_agent_array)
@@ -205,5 +204,3 @@ class MovingWorld(Cell2D):
         self.healthy.append(np.count_nonzero(self.array == 1))
         self.contagious.append(np.count_nonzero((self.array > 1) & (self.array < 2)))
         self.sick.append(np.count_nonzero(self.array == 2))
-
-        
