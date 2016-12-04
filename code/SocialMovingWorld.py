@@ -191,6 +191,7 @@ class SocialMovingWorld(Cell2D):
 
                 # Get the destination index as the empty_loc with the closest social value to the agent
                 dest_i, dest_j = tuple(empty_locs[social_neighbors.index(closest_social)])
+                empty_locs[social_neighbors.index(closest_social)] = (source_i, source_j)
                 
                 # Check if agent is healthy(or contagious but not sick) or if sick agents moving is true
                 if self.array[source_i][source_j] < 2 or self.sick_move:
