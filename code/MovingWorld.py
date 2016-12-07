@@ -69,6 +69,7 @@ class MovingWorld(Cell2D):
         self.num_sick = params.get("num_sick", 1)
         self.num_moves = params.get("moves_per_step", 0)
         self.sick_move = params.get("sick_move", False)
+        self.global_immunity = params.get("immunity", 0.9)
 
         # Initialize arrays to track illness data
         self.healthy = []
@@ -92,7 +93,7 @@ class MovingWorld(Cell2D):
             for i in range(self.n):
                 for j in range(self.n):
                     if isinstance(health_shuffle[self.n * i + j], (int, float)):
-                        self.agent_array[i][j] = Agent(health=health_shuffle[self.n * i + j])
+                        self.agent_array[i][j] = Agent(immunity=self.global_immunity,health=health_shuffle[self.n * i + j])
         else:
             self.agent_array = agent_array
 
