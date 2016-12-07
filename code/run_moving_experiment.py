@@ -4,12 +4,35 @@ from WorldViewer import WorldViewer
 import thinkplot
 import matplotlib.pyplot as plt
 
+def sweep_moves(path, n, frames, num_agents, num_sick, moves_per_step, immunity):
+    """Sweeps the moves_per_step parameter and creates a graph of the number
+    of agents who are sick or contagious versus time for each immunity value.
+    """
+    for moves in [1, 2, 3, 4, 5, 10]:
+        grid = MovingWorld(n=n,
+                           immunity=immunity,
+                           num_agents=num_agents,
+                           num_sick=num_sick,
+                           moves_per_step=moves_per_step)
+
+        # the World step method must return a value for this to work. In this
+        # case, it returns the number that is either sick or contagious.
+        segs = [grid.step() for i in range(frames)]
+
+        thinkplot.plot(segs, label='moves_per_step = %.1f' % moves)
+
+    thinkplot.config(xlabel='Time steps', ylabel='num_sick + num_contagious',
+                    loc='lower right')
+
+    plt.savefig(path+'moves_per_step_sweep.pdf')
+    plt.clf()
+    print("Moves per step sweep saved!")
 
 def sweep_immunity(path, n, frames, num_agents, num_sick, moves_per_step):
     """Sweeps the immunity parameter and creates a graph of the number of agents
     who are sick or contagious versus time for each immunity value.
     """
-    for immunity in [0.3, 0.6, 0.9]:
+    for immunity in [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]:
         grid = MovingWorld(n=n,
                            immunity=immunity,
                            num_agents=num_agents,
@@ -72,16 +95,17 @@ def make_animation(path, n, frames, fps, num_agents, num_sick, moves_per_step):
 
     print("Animation saved!")
 
-def run_experiment(path, n, frames, fps, num_agents, num_sick, moves_per_step):
+def run_experiment(path, n, frames, fps, num_agents, num_sick, moves_per_step, immunity):
     """Runs the overall experiment. All output (animation and graphs) is saved
     to the output folder.
     """
     # make animation and save it
-    make_animation(path, n, frames, fps, num_agents, num_sick, moves_per_step)
+    # make_animation(path, n, frames, fps, num_agents, num_sick, moves_per_step)
 
     # Make graphs
-    graph_bins(path, n, frames, num_agents, num_sick, moves_per_step)
+    # graph_bins(path, n, frames, num_agents, num_sick, moves_per_step)
     sweep_immunity(path, n, frames, num_agents, num_sick, moves_per_step)
+    sweep_moves(path, n, frames, num_agents, num_sick, moves_per_step, immunity)
 
     print("Experiment finished!")
 
@@ -93,6 +117,7 @@ if __name__ == "__main__":
     moves_per_step = 3
     frames = 400
     fps = 7
+    immunity = 0.9
     num_agents = n**2-100
 
     run_experiment("output/",
@@ -101,4 +126,5 @@ if __name__ == "__main__":
                    fps=fps,
                    num_agents=num_agents,
                    num_sick=num_sick,
-                   moves_per_step=moves_per_step)
+                   moves_per_step=moves_per_step,
+                   immunity=immunity)
