@@ -142,7 +142,7 @@ Based on the experiments above, we show that disease spread is increased in by t
 We also show that agents developing a resistance or immunity to specific diseases after they have been ill as people do is crucial to the health and survival of humans on large scale.  Without this protection, the entire population of agents quickly become and remain sick rather than the spread of a specific disease peaking and trailing off.  
 
 
-### Reflection on Learning Goals
+## Reflection on Learning Goals
 
 ### Hannah:
 
