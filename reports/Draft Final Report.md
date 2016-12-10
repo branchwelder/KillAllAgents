@@ -137,11 +137,13 @@ To answer this question we simply increase the immunity of the agents that have 
 By preventing agents from becoming reinfected, we both drastically slow the infection rate after the peak number of sick agents had been reached and prevent the disease from breaking out again after the majority of the population has previously been infected as shown in Figures X and X.
 
 No Post-Recovery Immunity
+
 ![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(2).png?raw=true)
 
 
 
 Post-Recovery Immunity
+
 ![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(3).png?raw=true)
 
 ### Interpretation
