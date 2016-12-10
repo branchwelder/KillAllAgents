@@ -69,7 +69,7 @@ class MovingWorld(Cell2D):
         self.num_sick = params.get("num_sick", 1)
         self.num_moves = params.get("moves_per_step", 0)
         self.sick_move = params.get("sick_move", False)
-        self.global_immunity = params.get("immunity", 0.9)
+        self.global_immunity = params.get("immunity", 0.5)
 
         # Initialize arrays to track illness data
         self.healthy = []
@@ -122,7 +122,6 @@ class MovingWorld(Cell2D):
         for i in range(self.n):
             for j in range(self.n):
                 if self.agent_array[i][j] is not None:
-                    #print("Cell: " + str((i, j)))
                     # Get list of neighbors health
                     neighbors_health = []
                     for a in range(i - 1, i + 2):
@@ -135,28 +134,29 @@ class MovingWorld(Cell2D):
                     neigh_health_frac = sum(neighbors_health) / 8
 
                     # Update agent health
+                    current_health = self.agent_array[i][j].health
+
                     # If sick (and contagious)
-                    if self.agent_array[i][j].health > 0.9:
+                    if current_health > 0.9:
                         if random.randrange(0, 100) == 1:
                             new_agent_array[i][j].recovered = True
                             new_agent_array[i][j].health = 0
 
-                    # If health and contagious
-                    elif self.agent_array[i][j].health < 1 and self.agent_array[i][j].health > 0:
-                        #print("I was contagious")
+                    # If contagious
+                    elif current_health < 1 and current_health > 0:
                         new_agent_array[i][j].health += 0.1
 
                     # If healthy
-                    elif self.agent_array[i][j].health == 0:
+                    elif current_health == 0:
                         immunity = self.agent_array[i][j].immunity
-                        neigh_health_chance = neigh_health_frac
-                        health_chance = random.random() * neigh_health_chance * 5
-                        if self.agent_array[i][j].recovered == True:
+
+                        if random.random() < neigh_health_frac:
+                            if self.agent_array[i][j].recovered == True:
+                                new_agent_array[i][j].health = 0
+                            elif random.random() > immunity:
+                                new_agent_array[i][j].health = 0.1
+                        else:
                             new_agent_array[i][j].health = 0
-                        elif neigh_health_chance == 0:
-                            new_agent_array[i][j].health = 0
-                        elif health_chance > immunity:
-                            new_agent_array[i][j].health = 0.1
 
 
         empty = self.array == 0

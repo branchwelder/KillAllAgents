@@ -11,11 +11,11 @@ class Agent:
         # extract the parameters
 
         # How sick is this agent?
-        # Healthy = 0, Sick = 0 Contagious = 0-1.
+        # Healthy = 0, Sick = 1, Contagious = 0-1
         self.health = params.get('health', 0)
 
         # How resistent to disease is this agent?
-        self.immunity = params.get('immunity', 0.9)
+        self.immunity = params.get('immunity', 0.5)
 
         # How extroverted is this agent?
         # Introverted = 0, Extroverted = 1, Range between
