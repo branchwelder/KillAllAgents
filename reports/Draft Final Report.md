@@ -56,8 +56,6 @@ In the moving agents animation we observe the opposite effect. More agents get s
 
 The figure below further shows this effect by increasing the number of agents who move to a new space each time step and showing how the height of the peak of sick agents changes as this increases.  As the number of agents moving each time step increases, the value of the peak number of agents that are sick at one time also increases
 
-![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/movesperturn.jpg?raw=true)
-
 This graph shows the number of agents in each health category over time for simulations run where there were between 0-20 agents moving each time step.
 
 This confirms again for us that the more agents move around within the array and the more other agents they are able to interact with, the quicker and higher the number of sick people in the population will spike. Sickness spreads faster and to more people.
@@ -149,32 +147,57 @@ We also show that agents developing a resistance or immunity to specific disease
 ### Hannah:
 
 I would like to learn more about numpy by creating a model where I need to largely come up with my own way of modeling things, as opposed to the homework assignments where I could largely copy/modify code written above. I’m also looking forward to working with visualization libraries to create descriptive (and possible interactive) graphs of our results. I also enjoy the freedom that this project gives us in terms of different directions we could take once we have completed our simple model because I want to learn more about the intricacies of disease spread, and these very specific extensions give me the opportunity to do that.
-Mid-Project checkin: I am satisfied that this project is helping me achieve my original learning goals. I’ve enjoyed learning about some of the more hidden numpy features and using them to create graphs of our results, especially as we move into the phase of the project where we’re working on extensions.
-Final Reflection: I believe that this project had helped me satisfy all of my learning goals. I have had many opportunities to work with numpy and matplotlib to create a reasonably complex agent-based model, and I’ve learned a lot about disease spread along the way.
+
+#### Mid-Project checkin: 
+
+I am satisfied that this project is helping me achieve my original learning goals. I’ve enjoyed learning about some of the more hidden numpy features and using them to create graphs of our results, especially as we move into the phase of the project where we’re working on extensions.
+
+#### Final Reflection: 
+
+I believe that this project had helped me satisfy all of my learning goals. I have had many opportunities to work with numpy and matplotlib to create a reasonably complex agent-based model, and I’ve learned a lot about disease spread along the way.
 
 ### Katie:
 
 Identifying correct models and characteristics to do specific analysis and using numpy. Because of the broad scope, this project has opportunities for using a variety of different model types in different ways, which will require choosing and implementing the appropriate model for each extension that we want to explore. We will also use tools such as numpy and matplotlib for modeling and results representation.
-Mid-Project checkin: I think so far this project has helped me work through my learning goals. We have discussed the applications and advantages of different model types, and I worked with both numpy and matplotlib implementations when we created our initial model. As we add extensions, I will be able to continue with both of these goals.
-Final Reflection: This project has been successful in allowing me to explore the characteristics of various models and to see how carefully determining the governing equations in a CA model can create an accurate representation of the world.  I also gained experience creating and debugging implementations that use tools such as numpy.
+
+#### Mid-Project checkin:
+
+I think so far this project has helped me work through my learning goals. We have discussed the applications and advantages of different model types, and I worked with both numpy and matplotlib implementations when we created our initial model. As we add extensions, I will be able to continue with both of these goals.
+
+#### Final Reflection:
+
+This project has been successful in allowing me to explore the characteristics of various models and to see how carefully determining the governing equations in a CA model can create an accurate representation of the world.  I also gained experience creating and debugging implementations that use tools such as numpy.
 
 ### Brenna:
 
 I originally listed my learning goals to include working with topic relevant to world and learning about agent-based modeling. This project would strongly fulfill both of those goals. I am interested in exploring how agents interact in a system in a more in depth way, and seeing how these types of models behave in a more complex simulation. By applying this tool/method to the concept of infectious disease, I will have the opportunity to connect my work to something in the real world, and draw parallels between our simulations and reality. This project has so much room to grow and expand, and I am very excited about some of the potential extensions to this project, and the opportunities they provide to reach a greater understanding of how these types of models can be made and how they can be both useful and interesting.
-Mid-Project checkin: 
+
+#### Mid-Project checkin: 
+
 I'm happy with how this project has been fulfilling my learning goals so far and am especially excited about delving into more of the extensions of our model.
-Final reflection: 
+
+#### Final reflection: 
+
 This project has met my learning goals. At the start of this project it was important to me to learn more about and get more experience with working with agent based models. Especially in diving into our model’s extensions and developing how agents are affected by each other in this model, I believe I have gotten  the experience I was looking for. I was also interested in doing a project that was relevant to a real world context. Investigating disease spread fulfilled that goal, and I’ve found connecting our model’s results to real world to be an interesting challenge.
 
 ### Annotated Bibliography
+
 Liliana Perez, Suzana Dragicevic, "An agent-based approach for modeling dynamics of contagious disease spread" International Journal of Health and Geophysics 2009 – Published 05 August 2009 Link: https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-8-50 (Links to an external site.) This paper uses an agent-based modelling approach to integrate geographic information about individuals to simulate the spread of contagious disease in an urban setting based on people's daily activities, movement, and geo-spatial interactions between people. The authors' goal was to create a model to show how disease spreads through a network of human interactions, and give people a better understanding of how this occurs in an urban environment. It would be particularly useful for running "what if" scenarios on potential outbreaks.
+
 Azimi, Jomali, Mofrad, “Accounting for Diffusion in Agent Based Models of Reaction-Diffusion Systems with Application to Cytoskeletal Diffusion” Downloaded from http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025306 (Links to an external site.) In this paper, the authors investigate a computational agent-based model do determine its accuracy in modeling the diffusion of molecules in a three-dimensional solution. They find that their model closely mimics the real behavior of these systems, and they go on to simulate the effects of molecular crowding on effective diffusion.
+
 Andrew T. Crooks, Atesmachew B. Hailegiorgis, "An agent-based modeling approach applied to the spread of cholera" Link:http://www.sciencedirect.com/science/article/pii/S1364815214002515 In this paper, the concept of directly agent based modeling to a specific deisease is explored. The authors' approach will be useful to us when creating a model of a specific disease ourselves. It is especially intereting how they modeled the spread of cholera, which needs a less obvious approach than most diseases.
+
 Kathleen Carley, et al., "BioWar: Acalable Agent-based Model of Bioattacks" Link: http://www.casos.cs.cmu.edu/publications/protected/2005-2006/carley_2006_biowarbioattacks.pdf Looking at the effects that external dynamics such as economics and social networks have on the spread of various diseases
+
 Weidong Gu and Robert Novak, "Agent-based modelling of mosquito foraging behaviour for malaria control" Link:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2818421/ Interesting commentary on ways to factor in the causes of diseases as agents themselves rather than attributes of the agents that could be infected
+
 Azadeh Alimadad, Vahid Dabbaghian, Suraj K. Singhk, and Herbert H. Tsang, “Modeling HIV Spread through Sexual Contact using a Cellular Automaton” Link: http://www.cecm.sfu.ca/~mmonagan/MITACS/papers/VahidHIV.pdf Models the transmisson of HIV through a population in the context of social connections.
+
 Chung-Yuan Huang, Chuen-Tsai Sun, Ji-Lung Hsieh, Holin Lin. “Simulating SARS: Small-World Epidemiological Modeling and Public Health Policy Assessments.” Journal of Artificial Societies and Social Simulation vol. 7, no. 4. 31 October, 2004. Link: http://jasss.soc.surrey.ac.uk/7/4/2.html This paper proposes a model of epidemiological scenarios in daily contact social networks using a small-world model. It demonstrates use of 2D automata to model disease spread between social contacts.
+
 Yang, Y., J. D. Sugimoto, M. E. Halloran, N. E. Basta, D. L. Chao, L. Matrajt, G. Potter, E. Kenah, and I. M. Lo ngini. "The Transmissibility and Control of Pandemic Influenza A (H1N1) Virus." Science 326.5953 (2009): 729-33. Web. Link: http://science.sciencemag.org/content/326/5953/729 This paper shows a model of the transmissibility of H1N1 through a population. It has been useful in validating our model's behavior. It is also another resource outlining design of models similar to our own.
+
 Archer, B. N., G. A. Timothy, C. Cohen, S. Tempia, M. Huma, L. Blumberg, D. Naidoo, A. Cengimbo, and B. D. Schoub. "Introduction of 2009 Pandemic Influenza A Virus Subtype H1N1 Into South Africa: Clinical Presentation, Epidemiology, and Transmissibility of the First 100 Cases." Journal of Infectious Diseases 206.Suppl 1 (2012) This was another useful paper containing a flu transmission model we have used to validate our own model.
 
 
