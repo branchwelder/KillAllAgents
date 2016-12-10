@@ -1,13 +1,15 @@
 
-Kill All Agents: An Investigation of Infectious Disease and Agent Based Modeling
-Kathryn Hite, Brenna Manning, Hannah Twigg-Smith
-Complexity Science 2016
+# Kill All Agents: An Investigation of Infectious Disease and Agent Based Modeling
+#### Kathryn Hite, Brenna Manning, Hannah Twigg-Smith
+#### Complexity Science 2016
+________________________________
 
-Abstract
+### Abstract
 In this paper, we investigate the influence that individual people have on human health and disease spread at the scale of larger populations. We perform several smaller experiments using an agent based model of the spread of infectious disease in humans. We first create a simple agent-based model in a two dimensional cellular automata which models the spread of a disease by interpersonal contact, such as the common cold. From there, we add more features to investigate the different human attributes that may alter the spread of disease, including the sociability and immunity of agents. Allowing agent clustering on the cellular automata to represent “cities” or social networks in our model, as well as changing parameters corresponding to other real world situations demonstrates how disease spread may be impacted by these factors as they exist in the real world.
-Experiments
+### Experiments
 We first create a simple model of a disease such as the flu, which spreads by interpersonal contact. This model is an agent-based two-dimensional cellular automaton with few rules. Once verified against existing models, this simple model is used as the foundation for experiments based on those found in relevant papers. Each of these experiments are focused around changing some parameter in the model that corresponds to a potential real world factor,  seeing how this change impacts the model, and using what we learn from those impacts to draw insights about the world.
-Experiment: The Simple Model
+
+#### Experiment: The Simple Model
 Question
 The purpose of this experiment is to observe how disease spreads through this simulated population of agents with few rules. We determine from this simple model whether our basic simulation is a reasonable enough abstraction of the human population to use as a baseline for future experiments.
 Methodology
@@ -30,7 +32,8 @@ H Yasuda, K Suzuki
 
 
 Comparing our results to this and similar results in articles and academic papers, we consider our simulation to be a reasonable abstraction and we use it as a foundation for further experimentation. 
-Experiment: Moving Agents vs Still
+
+#### Experiment: Moving Agents vs Still
 Q: motivating question; what is the purpose of the experiment?
 The purpose of this experiment is to learn what impact agents randomly moving around the array has on the spread of disease through the population. People in the real world do not stay in contact with the same 8 neighbors all the time. We are curious how this will impact the "wave" effect we observe in the simple model of disease spread.
 M: methodology; how did you implement the experiment (at an appropriate level of detail)?
@@ -110,7 +113,7 @@ As you can see in [FIGURES], as we increase the the immunity, the maximum number
 
 Interpretation
 We do not have an explanation as to why the rate at which max agents sick decreases increases after immunity=0.7. However, we believe that measuring the maximum number of agents sick for each run might not be the ideal tool to relay the effectiveness of agent immunity. These graphs show that an increase in immunity might only serve “flatten” the peak of sick agents and delay it, which tells us that a lower immunity infects a larger population faster. To further investigate this question, we will measure and plot the total fraction of the agent population that is sick at any point during the simulation, rather than the max number that is sick at the same time during the simulation.
-Experiment: Impact of Immunity After Recovery
+#### Experiment: Impact of Immunity After Recovery
 Q: motivating question; what is the purpose of the experiment?
 Does an agent becoming completely immune to a disease once they have recovered from it prevent a disease from persisting at a catastrophic level in the population?
 M: methodology; how did you implement the experiment (at an appropriate level of detail)?
@@ -128,7 +131,7 @@ Based on the experiments above, we show that disease spread is increased in by t
 We also show that agents developing a resistance or immunity to specific diseases after they have been ill as people do is crucial to the health and survival of humans on large scale.  Without this protection, the entire population of agents quickly become and remain sick rather than the spread of a specific disease peaking and trailing off.  
 
 
-Reflection on Learning Goals
+### Reflection on Learning Goals
 Hannah:
 I would like to learn more about numpy by creating a model where I need to largely come up with my own way of modeling things, as opposed to the homework assignments where I could largely copy/modify code written above. I’m also looking forward to working with visualization libraries to create descriptive (and possible interactive) graphs of our results. I also enjoy the freedom that this project gives us in terms of different directions we could take once we have completed our simple model because I want to learn more about the intricacies of disease spread, and these very specific extensions give me the opportunity to do that.
 Mid-Project checkin: I am satisfied that this project is helping me achieve my original learning goals. I’ve enjoyed learning about some of the more hidden numpy features and using them to create graphs of our results, especially as we move into the phase of the project where we’re working on extensions.
@@ -141,8 +144,8 @@ Brenna:
 I originally listed my learning goals to include working with topic relevant to world and learning about agent-based modeling. This project would strongly fulfill both of those goals. I am interested in exploring how agents interact in a system in a more in depth way, and seeing how these types of models behave in a more complex simulation. By applying this tool/method to the concept of infectious disease, I will have the opportunity to connect my work to something in the real world, and draw parallels between our simulations and reality. This project has so much room to grow and expand, and I am very excited about some of the potential extensions to this project, and the opportunities they provide to reach a greater understanding of how these types of models can be made and how they can be both useful and interesting.
 Mid-Project checkin: I'm happy with how this project has been fulfilling my learning goals so far and am especially excited about delving into more of the extensions of our model.
 Final reflection: This project has met my learning goals. At the start of this project it was important to me to learn more about and get more experience with working with agent based models. Especially in diving into our model’s extensions and developing how agents are affected by each other in this model, I believe I have gotten  the experience I was looking for. I was also interested in doing a project that was relevant to a real world context. Investigating disease spread fulfilled that goal, and I’ve found connecting our model’s results to real world to be an interesting challenge.
-Annotated Bibliography
-Annotated Bibliography
+
+### Annotated Bibliography
 Liliana Perez, Suzana Dragicevic, "An agent-based approach for modeling dynamics of contagious disease spread" International Journal of Health and Geophysics 2009 – Published 05 August 2009 Link: https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-8-50 (Links to an external site.) This paper uses an agent-based modelling approach to integrate geographic information about individuals to simulate the spread of contagious disease in an urban setting based on people's daily activities, movement, and geo-spatial interactions between people. The authors' goal was to create a model to show how disease spreads through a network of human interactions, and give people a better understanding of how this occurs in an urban environment. It would be particularly useful for running "what if" scenarios on potential outbreaks.
 Azimi, Jomali, Mofrad, “Accounting for Diffusion in Agent Based Models of Reaction-Diffusion Systems with Application to Cytoskeletal Diffusion” Downloaded from http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025306 (Links to an external site.) In this paper, the authors investigate a computational agent-based model do determine its accuracy in modeling the diffusion of molecules in a three-dimensional solution. They find that their model closely mimics the real behavior of these systems, and they go on to simulate the effects of molecular crowding on effective diffusion.
 Andrew T. Crooks, Atesmachew B. Hailegiorgis, "An agent-based modeling approach applied to the spread of cholera" Link:http://www.sciencedirect.com/science/article/pii/S1364815214002515 In this paper, the concept of directly agent based modeling to a specific deisease is explored. The authors' approach will be useful to us when creating a model of a specific disease ourselves. It is especially intereting how they modeled the spread of cholera, which needs a less obvious approach than most diseases.
