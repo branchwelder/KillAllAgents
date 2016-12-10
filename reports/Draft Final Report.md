@@ -24,12 +24,15 @@ In the visual representation linked below, the light orange squares are healthy 
 
 [Simple Model Animation](https://www.youtube.com/watch?v=FU0oUiNzODU)
 
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/bg100ppl10sick.png?raw=true)
+
 As the model runs, the number of agents sick in the population increases until it reaches a peak. After this peak, there were no more newly infected/contagious agents, and the number of sick agents was eventually reduced to zero as the agents recover and move into the healthy state. This aligns with what we would expect, since after an agent has recovered it does not get sick again, essentially becoming immune to the disease. As you can see in the animation, in this run of this model every agent in the array eventually caught the disease. We also observe an interesting pattern of disease spreading in waves traveling across the array.
 
 
 ### Interpretation
 
 After running this simulation several times and observing the animations it generates, we compare our results to figures from articles such as this simulation of H1N1 influenza in Japan in 2009.  
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/h1n1.jpg?raw=true)
 H Yasuda, K Suzuki
 
 
@@ -56,7 +59,11 @@ In the moving agents animation we observe the opposite effect. More agents get s
 
 The figure below further shows this effect by increasing the number of agents who move to a new space each time step and showing how the height of the peak of sick agents changes as this increases.  As the number of agents moving each time step increases, the value of the peak number of agents that are sick at one time also increases
 
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/movesperturn.jpg?raw=true)
+
 This graph shows the number of agents in each health category over time for simulations run where there were between 0-20 agents moving each time step.
+
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/movesperstepsweep.jpg?raw=true)
 
 This confirms again for us that the more agents move around within the array and the more other agents they are able to interact with, the quicker and higher the number of sick people in the population will spike. Sickness spreads faster and to more people.
 
