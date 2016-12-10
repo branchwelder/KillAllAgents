@@ -20,7 +20,7 @@ In the visual representation linked below, the light orange squares are healthy 
 Results
 
 
-Simple Model Animation
+[Simple Model Animation](https://www.youtube.com/watch?v=FU0oUiNzODU)
 
 
 As the model runs, the number of agents sick in the population increases until it reaches a peak. After this peak, there were no more newly infected/contagious agents, and the number of sick agents was eventually reduced to zero as the agents recover and move into the healthy state. This aligns with what we would expect, since after an agent has recovered it does not get sick again, essentially becoming immune to the disease. As you can see in the animation, in this run of this model every agent in the array eventually caught the disease. We also observe an interesting pattern of disease spreading in waves traveling across the array.
@@ -43,8 +43,8 @@ In order to simulate individuals moving about in the world and interacting with 
 R: results; what happened when you ran the experiment?
 
 
-Link to Still Agents Animation
-Link to Moving Agents Animation
+Link to [Still Agents Animation](https://www.youtube.com/watch?v=_897x1_opTI)
+Link to [Moving Agents Animation](https://www.youtube.com/watch?v=8e2uW6XcKUQ)
 
 
 In the still agents with some empty spaces animation, we observe the empty squares acting almost like walls, keeping the disease within a certain area of the grid before allowing it to spread further. This leads to a decrease in the severity of peaks in  how many agents are sick.  Even if the disease was to eventually spread to all or most agents, there is not ever a time where as many are as sick at one time, compared to when there are not empty spaces.
@@ -74,8 +74,8 @@ I: interpretation; how do you interpret the result as an answer to the question?
 
 
 We determine from these results that whether or not an agent moves around a lot in space does have an impact on how disease spreads through that agent’s population. Even if only one agent is moving every time step it makes a pretty significant difference.  Similarly in the real world, people who interact with more other people have a greater chance of getting sick or spreading illness if they are already contagious. 
-​
-Experiment: Health Status Over Time of Introverted Agents vs Extroverted Agents
+
+#### Experiment: Health Status Over Time of Introverted Agents vs Extroverted Agents
 Q: motivating question; what is the purpose of the experiment?
 In this experiment we determine the effect that the sociability of agents can have on the infection rate of the entire population.  Does the introversion or extroversion of an individual agent change the sickness of the population as a whole?
 M: methodology; how did you implement the experiment (at an appropriate level of detail)?
