@@ -132,18 +132,26 @@ We also show that agents developing a resistance or immunity to specific disease
 
 
 ### Reflection on Learning Goals
-Hannah:
+
+### Hannah:
+
 I would like to learn more about numpy by creating a model where I need to largely come up with my own way of modeling things, as opposed to the homework assignments where I could largely copy/modify code written above. I’m also looking forward to working with visualization libraries to create descriptive (and possible interactive) graphs of our results. I also enjoy the freedom that this project gives us in terms of different directions we could take once we have completed our simple model because I want to learn more about the intricacies of disease spread, and these very specific extensions give me the opportunity to do that.
 Mid-Project checkin: I am satisfied that this project is helping me achieve my original learning goals. I’ve enjoyed learning about some of the more hidden numpy features and using them to create graphs of our results, especially as we move into the phase of the project where we’re working on extensions.
 Final Reflection: I believe that this project had helped me satisfy all of my learning goals. I have had many opportunities to work with numpy and matplotlib to create a reasonably complex agent-based model, and I’ve learned a lot about disease spread along the way.
-Katie:
+
+### Katie:
+
 Identifying correct models and characteristics to do specific analysis and using numpy. Because of the broad scope, this project has opportunities for using a variety of different model types in different ways, which will require choosing and implementing the appropriate model for each extension that we want to explore. We will also use tools such as numpy and matplotlib for modeling and results representation.
 Mid-Project checkin: I think so far this project has helped me work through my learning goals. We have discussed the applications and advantages of different model types, and I worked with both numpy and matplotlib implementations when we created our initial model. As we add extensions, I will be able to continue with both of these goals.
 Final Reflection: This project has been successful in allowing me to explore the characteristics of various models and to see how carefully determining the governing equations in a CA model can create an accurate representation of the world.  I also gained experience creating and debugging implementations that use tools such as numpy.
-Brenna:
+
+### Brenna:
+
 I originally listed my learning goals to include working with topic relevant to world and learning about agent-based modeling. This project would strongly fulfill both of those goals. I am interested in exploring how agents interact in a system in a more in depth way, and seeing how these types of models behave in a more complex simulation. By applying this tool/method to the concept of infectious disease, I will have the opportunity to connect my work to something in the real world, and draw parallels between our simulations and reality. This project has so much room to grow and expand, and I am very excited about some of the potential extensions to this project, and the opportunities they provide to reach a greater understanding of how these types of models can be made and how they can be both useful and interesting.
-Mid-Project checkin: I'm happy with how this project has been fulfilling my learning goals so far and am especially excited about delving into more of the extensions of our model.
-Final reflection: This project has met my learning goals. At the start of this project it was important to me to learn more about and get more experience with working with agent based models. Especially in diving into our model’s extensions and developing how agents are affected by each other in this model, I believe I have gotten  the experience I was looking for. I was also interested in doing a project that was relevant to a real world context. Investigating disease spread fulfilled that goal, and I’ve found connecting our model’s results to real world to be an interesting challenge.
+Mid-Project checkin: 
+I'm happy with how this project has been fulfilling my learning goals so far and am especially excited about delving into more of the extensions of our model.
+Final reflection: 
+This project has met my learning goals. At the start of this project it was important to me to learn more about and get more experience with working with agent based models. Especially in diving into our model’s extensions and developing how agents are affected by each other in this model, I believe I have gotten  the experience I was looking for. I was also interested in doing a project that was relevant to a real world context. Investigating disease spread fulfilled that goal, and I’ve found connecting our model’s results to real world to be an interesting challenge.
 
 ### Annotated Bibliography
 Liliana Perez, Suzana Dragicevic, "An agent-based approach for modeling dynamics of contagious disease spread" International Journal of Health and Geophysics 2009 – Published 05 August 2009 Link: https://ij-healthgeographics.biomedcentral.com/articles/10.1186/1476-072X-8-50 (Links to an external site.) This paper uses an agent-based modelling approach to integrate geographic information about individuals to simulate the spread of contagious disease in an urban setting based on people's daily activities, movement, and geo-spatial interactions between people. The authors' goal was to create a model to show how disease spreads through a network of human interactions, and give people a better understanding of how this occurs in an urban environment. It would be particularly useful for running "what if" scenarios on potential outbreaks.
