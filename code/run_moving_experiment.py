@@ -221,7 +221,7 @@ if __name__ == "__main__":
     frames = 500
     fps = 10
     immunity = 0.7
-    num_agents = int(n**2-(n**2/4))
+    num_agents = int(n**2-(n**2/2))
 
     run_experiment("output/",
                    n=n,

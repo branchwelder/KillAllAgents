@@ -19,4 +19,4 @@ class Agent:
 
         # How extroverted is this agent?
         # Introverted = 0, Extroverted = 1, Range between
-        self.social = 1#np.random.random()
+        self.social = 0#np.random.random()

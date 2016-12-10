@@ -161,7 +161,7 @@ class SocialMovingWorld(Cell2D):
         if len(occupied_locs):
             np.random.shuffle(occupied_locs)
         if len(empty_locs):
-            np.random.shuffle(empty_locs)    
+            np.random.shuffle(empty_locs) 
             
             if self.num_moves > len(occupied_locs) or self.num_moves > len(occupied_locs):
                 self.num_moves = min(len(occupied_locs),len(empty_locs))
@@ -191,11 +191,35 @@ class SocialMovingWorld(Cell2D):
                 agent_social = self.agent_array[source_i][source_j].social
                 closest_social = min(social_neighbors ,key=lambda x:abs(x-agent_social))
 
+                ## DEBUG
+                #print(self.array)
+
+                #print("Agent Social")
+                #print(agent_social)
+
+                #print("Closest Social")
+                #print(closest_social)
 
                 # Get the destination index as the empty_loc with the closest social value to the agent
                 dest_i, dest_j = tuple(empty_locs[social_neighbors.index(closest_social)])
-                empty_locs[social_neighbors.index(closest_social)] = (source_i, source_j)
-                
+
+                ## DEBUG
+                #print("Closest Social Index")
+                #print(social_neighbors.index(closest_social))
+
+                #print("Empty Location")
+                #print(empty_locs[social_neighbors.index(closest_social)])
+
+                #print("Destination Options")
+                #print(empty_locs)
+                #print(social_neighbors)
+
+                empty_locs[social_neighbors.index(closest_social)] = [source_i, source_j]
+
+                ## DEBUG
+                #print("Chosen Destination")
+                #print(dest_i, dest_j)
+
                 # Check if agent is healthy(or contagious but not sick) or if sick agents moving is true
                 if self.array[source_i][source_j] < 2 or self.sick_move:
                     # move
