@@ -22,6 +22,8 @@ Results
 
 [Simple Model Animation](https://www.youtube.com/watch?v=FU0oUiNzODU)
 
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/bg100ppl10sick.png?raw=true)
+
 
 As the model runs, the number of agents sick in the population increases until it reaches a peak. After this peak, there were no more newly infected/contagious agents, and the number of sick agents was eventually reduced to zero as the agents recover and move into the healthy state. This aligns with what we would expect, since after an agent has recovered it does not get sick again, essentially becoming immune to the disease. As you can see in the animation, in this run of this model every agent in the array eventually caught the disease. We also observe an interesting pattern of disease spreading in waves traveling across the array.
 
