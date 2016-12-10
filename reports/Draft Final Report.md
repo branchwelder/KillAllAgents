@@ -56,6 +56,8 @@ In the moving agents animation we observe the opposite effect. More agents get s
 
 The figure below further shows this effect by increasing the number of agents who move to a new space each time step and showing how the height of the peak of sick agents changes as this increases.  As the number of agents moving each time step increases, the value of the peak number of agents that are sick at one time also increases
 
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/movesperturn.jpg?raw=true)
+
 This graph shows the number of agents in each health category over time for simulations run where there were between 0-20 agents moving each time step.
 
 This confirms again for us that the more agents move around within the array and the more other agents they are able to interact with, the quicker and higher the number of sick people in the population will spike. Sickness spreads faster and to more people.
