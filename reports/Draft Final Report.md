@@ -139,6 +139,8 @@ By preventing agents from becoming reinfected, we both drastically slow the infe
 No Post-Recovery Immunity
 ![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(2).png?raw=true)
 
+
+
 Post-Recovery Immunity
 ![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(3).png?raw=true)
 
