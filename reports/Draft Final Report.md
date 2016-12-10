@@ -28,6 +28,8 @@ As the model runs, the number of agents sick in the population increases until i
 
 Interpretation
 After running this simulation several times and observing the animations it generates, we compare our results to figures from articles such as this simulation of H1N1 influenza in Japan in 2009.  
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/h1n1.jpg?raw=true)
+
 H Yasuda, K Suzuki
 
 
