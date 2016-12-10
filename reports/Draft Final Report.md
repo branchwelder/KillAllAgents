@@ -59,11 +59,11 @@ In the moving agents animation we observe the opposite effect. More agents get s
 
 The figure below further shows this effect by increasing the number of agents who move to a new space each time step and showing how the height of the peak of sick agents changes as this increases.  As the number of agents moving each time step increases, the value of the peak number of agents that are sick at one time also increases
 
-![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/movesperturn.jpg?raw=true)
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0.png?raw=true)
 
 This graph shows the number of agents in each health category over time for simulations run where there were between 0-20 agents moving each time step.
 
-![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/movesperstepsweep.jpg?raw=true)
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(1).png?raw=true){ width: 200px; }
 
 This confirms again for us that the more agents move around within the array and the more other agents they are able to interact with, the quicker and higher the number of sick people in the population will spike. Sickness spreads faster and to more people.
 
@@ -88,10 +88,12 @@ The following three figures show the final results of an extremely introverted p
 
 
 Extremely Introverted Agent Population
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/334c5945ee0c3483e6840709d33c40875ef152f7/reports/images/Introverted.png?raw=true)
 
 
 
 Extremely Extroverted Agent Population
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/334c5945ee0c3483e6840709d33c40875ef152f7/reports/images/Extroverted.png?raw=true)
 
 
 
@@ -135,8 +137,10 @@ To answer this question we simply increase the immunity of the agents that have 
 By preventing agents from becoming reinfected, we both drastically slow the infection rate after the peak number of sick agents had been reached and prevent the disease from breaking out again after the majority of the population has previously been infected as shown in Figures X and X.
 
 No Post-Recovery Immunity
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(2).png?raw=true)
 
 Post-Recovery Immunity
+![](https://github.com/hannahtwiggsmith/KillAllAgents/blob/master/reports/images/pastedImage0%20(3).png?raw=true)
 
 ### Interpretation
 
