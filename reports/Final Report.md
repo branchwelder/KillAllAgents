@@ -72,6 +72,7 @@ In order to simulate individuals moving about in the world and interacting with 
 
 
 Link to [Still Agents Animation](https://www.youtube.com/watch?v=_897x1_opTI)
+
 Link to [Moving Agents Animation](https://www.youtube.com/watch?v=8e2uW6XcKUQ)
 
 
@@ -233,31 +234,6 @@ Based on the experiments above, we show that disease spread is increased in by t
 
 We also show that agents developing a resistance or immunity to specific diseases after they have been ill as people do is crucial to the health and survival of humans on large scale.  Without this protection, the entire population of agents quickly become and remain sick rather than the spread of a specific disease peaking and trailing off.
 
-
-
-
-## Reflection on Learning Goals
-
-
-### Hannah:
-
-
-I would like to learn more about numpy by creating a model where I need to largely come up with my own way of modeling things, as opposed to the homework assignments where I could largely copy/modify code written above. I’m also looking forward to working with visualization libraries to create descriptive (and possible interactive) graphs of our results. I also enjoy the freedom that this project gives us in terms of different directions we could take once we have completed our simple model because I want to learn more about the intricacies of disease spread, and these very specific extensions give me the opportunity to do that. I am satisfied that this project is has helped me achieve my original learning goals. I’ve enjoyed learning about some of the more hidden numpy features and using them to create graphs of our results, especially as we move into the phase of the project where we’re working on extensions. I have had many opportunities to work with numpy and matplotlib to create a reasonably complex agent-based model, and I’ve learned a lot about disease spread along the way.
-
-
-### Katie:
-
-
-Identifying correct models and characteristics to do specific analysis and using numpy. Because of the broad scope, this project has opportunities for using a variety of different model types in different ways, which will require choosing and implementing the appropriate model for each extension that we want to explore. We will also use tools such as numpy and matplotlib for modeling and results representation.
-
-
-This project has been successful in allowing me to explore the characteristics of various models and to see how carefully determining the governing equations in a CA model can create an accurate representation of the world.  I also gained experience creating and debugging implementations that use tools such as numpy.
-
-
-### Brenna:
-
-
-I originally listed my learning goals to include working with a topic relevant to world and learning about agent-based modeling. This project has strongly fulfilled both of those goals. I am interested in exploring how agents interact in a system in a more in depth way, and seeing how these types of models behave in a more complex simulation. By applying this particular tool/method to the concept of infectious disease, I have had the opportunity to connect my work to something in the real world, and draw parallels between our simulations and reality. This project has helped me to reach a greater understanding of how these types of models can be made and how they can be both useful and interesting. Especially in diving into our model’s extensions and developing how agents are affected by each other in this model, I believe I have gotten  the experience I was looking for. I was also interested in doing a project that was relevant to a real world context. Investigating disease spread fulfilled that goal, and I’ve found connecting our model’s results to real world to be an interesting challenge.
 
 
 ### Annotated Bibliography
